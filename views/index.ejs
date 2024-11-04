@@ -1,0 +1,49 @@
+<%- include Partials/header.ejs %>
+<%- include Partials/main_nav.ejs%>
+<%- include Partials/footer.ejs %>
+
+<!---Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">INFR3120</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto"> //ms is right side and me is left side 
+        <li class="nav-item">
+          <% if(title=="Services") {%>
+          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+          <% } else { %>
+           
+        <li class="nav-item">
+          <% } %>
+          <a class="nav-link active" aria-current="page" href="/aboutus">About Us</a>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/product">Product</a>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/service">Service</a>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/contactus">Contct Us</a>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+  </div>
+</nav>
+<body>
+<!---Main Content-->
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <!--footer-->
+  <footer> 
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+      <h6 class="navbar-text">&copy; Copyright 2024. Made by Aleena Khan, All rights reserved</h6>
+    </nav>
+  </footer>
+</body>
+</html>
+
+//first file 
