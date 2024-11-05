@@ -1,5 +1,6 @@
 // immediately invoked function expression 
 //IIFI
+//SPA single page application
 
 (function(){
     function start(){

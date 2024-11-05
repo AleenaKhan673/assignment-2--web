@@ -9,6 +9,7 @@ let usersRouter = require('../routes/users');
 let bookRouter = require('../routes/book');
 let mongoose = require('mongoose');
 let DB = require('./db');
+
 // point my mongoose to the URI 
 mongoose.connect(DB.URI);
 let mongoDB = mongoose.connection;
