@@ -11,8 +11,8 @@ router.get('/aboutus', function(req, res, next) {
   res.render('index', { title: 'about me' });
 });
 /* GET product page. */
-router.get('/product', function(req, res, next) {
-  res.render('index', { title: 'Product' }); //change the index naming convention because of the partials
+router.get('/projects', function(req, res, next) {
+  res.render('index', { title: 'projects' }); //change the index naming convention because of the partials
 });
 /* GET contactus page. */
 router.get('/contactme', function(req, res, next) {
