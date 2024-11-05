@@ -12,6 +12,8 @@
     <script src = "/public/Script/app.js"></script>
     <script src = "/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src = "/node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   </body>
 </html>
 
@@ -26,18 +28,29 @@
       <ul class="navbar-nav ms-auto"> //ms is right side and me is left side 
         <li class="nav-item">
           <% if(title=="Services") {%>
-          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+          <a class="nav-link active" aria-current="page" href="/home"><i class="fa-solid fa-house"></i> Home</a>
           <% } else { %>
            
         <li class="nav-item">
           <% } %>
-        <li class="nav-item"></li>
-        <a class="nav-link active" aria-current="page" href="/home">Home</a>
-          <a class="nav-link active" aria-current="page" href="/aboutus">About Us</a>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/projects">Projects</a>
+        <a class="nav-link active" aria-current="page" href="/home"><i class="fa-solid fa-house"></i> Home</a> 
+        </li>
+
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/contactme">Contact me</a>
+          <a class="nav-link" aria-current="page" href="/aboutus">
+          <i class="fa-solid fa-person"></i> About Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/projects">
+          <i class="fa-solid fa-book"></i>  Projects</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/contactme">
+          <i class="fa-solid fa-phone"></i>  Contact me</a>
+        </li>
           </ul>
         </li>
         <li class="nav-item">
@@ -54,8 +67,8 @@
   <footer> 
     <nav class="navbar fixed-bottom navbar-dark bg-dark">
       <h6 class="navbar-text">&copy; Copyright 2024. Made by Aleena Khan, All rights reserved</h6>
-      <a href="https://www.linkedin.com/in/aleena-khan-5902b72b2/" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
-      <a href="https://github.com/AleenaKhan673/assignment-2--web" target="_blank"><i class="fa fa-github fa-lg"></i></a>
+      <a href="https://www.linkedin.com/in/aleena-khan-5902b72b2/" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+      <a href="https://github.com/AleenaKhan673/assignment-2--web" target="_blank"><i class="fa-brands fa-github-alt fa-lg"></i></a>
     </nav>
   </footer>
 </body>
