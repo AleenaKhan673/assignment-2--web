@@ -4,7 +4,7 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
+  <head>  
     <title><%= title%></title>
     <lin rel = 'stylesheet' href='/public/Content/app.css'/>
   </head>
@@ -25,20 +25,23 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto"> 
+
         <li class="nav-item">
-          <% if(title=="Services") {%>
-          <a class="nav-link active" aria-current="page" href="/home"><i class="fa-solid fa-house"></i> Home</a>
-          <% } else { %>
-           
-        <li class="nav-item">
-          <% } %>
-        <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="/home"><i class="fa-solid fa-house"></i> Home</a> 
+        <% if(title=="Home Page") {%>
+          <a class="nav-link active" aria-current="page" href="/home">
+        <% } else { %>
+          <a class="nav-link" aria-current="page" href="/home">
+        <% } %>   
+          <i class="fa-solid fa-house"></i> Home</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/aboutus">
-          <i class="fa-solid fa-person"></i> About Us</a>
+        <% if (title == "About Me") { %>
+          <a class="nav-link active" aria-current="page" href="/aboutme">
+        <% } else {%> 
+          <a class="nav-link" aria-current="page" href="/aboutme">
+        <% } %>       
+          <i class="fa-solid fa-person"></i> About Me</a>
         </li>
 
         <li class="nav-item">

@@ -11,16 +11,16 @@ router.get('/home', function(req, res, next) {
   res.render('index', { title: 'Home Page' });
 });
 /*GET about us page. */
-router.get('/aboutus', function(req, res, next) {
-  res.render('index', { title: 'about me' });
+router.get('/aboutme', function(req, res, next) {
+  res.render('index', { title: 'About Me' });
 });
 /* GET product page. */
 router.get('/projects', function(req, res, next) {
-  res.render('index', { title: 'projects' }); //change the index naming convention because of the partials
+  res.render('index', { title: 'Projects' }); //change the index naming convention because of the partials
 });
 /* GET contactus page. */
 router.get('/contactme', function(req, res, next) {
-  res.render('index', { title: 'contactme' });
+  res.render('index', { title: 'Contact Me' });
 });
 // you call the view from the router MVC
 module.exports = router;
