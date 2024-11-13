@@ -4,11 +4,11 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 let app = express();
-let indexRouter = require('../routes/index');
-let usersRouter = require('../routes/users');
-let bookRouter = require('../routes/book');
+let indexRouter = require('../index');
+let usersRouter = require('../users');
+let bookRouter = require('../book');
 let mongoose = require('mongoose');
-let DB = require('./db');
+let DB = require('../../../config/db');
 
 // point my mongoose to the URI 
 mongoose.connect(DB.URI);
@@ -21,18 +21,18 @@ mongoose.connect(DB.URI,{useNewURIParser:true,
   useUnifiedTopology:true
 })
 // view engine setup
-app.set('../views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../public')));
-app.use(express.static(path.join(__dirname, '../node_modules')));
+app.use(express.static(path.join(__dirname, '../../public')));
+app.use(express.static(path.join(__dirname, '../../node_modules')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/books',bookRouter);
+app.use('/bookslist',bookRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
